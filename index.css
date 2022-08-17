@@ -32,12 +32,12 @@ header {
 
 #hamburger-menu {
   font-size: 2rem;
-  height: 64px;
-  width: 64px;
+  height: 40px;
+  width: 40px;
   text-align: center;
   line-height: 64px;
-  border-bottom-left-radius: 36px;
-  background-color: rgba(255, 255, 255, 0.726);
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
 #top-left-shapes {

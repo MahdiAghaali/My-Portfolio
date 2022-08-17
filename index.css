@@ -1,4 +1,72 @@
 body {
-  background-color: black;
-  color: orange;
+  background-color: white;
+  color: #1a2236;
+  margin: 0;
+}
+
+p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  text-align: justify;
+}
+
+h1 {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 100%;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  top: 0px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+#hamburger-menu {
+  font-size: 2rem;
+  height: 64px;
+  width: 64px;
+  text-align: center;
+  line-height: 64px;
+  border-bottom-left-radius: 36px;
+  background-color: rgba(255, 255, 255, 0.726);
+}
+
+#top-left-shapes {
+  height: 100px;
+  left: 0px;
+}
+
+section {
+  border-color: black;
+  height: calc(100vh - 100vw / 2);
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+section:first-of-type {
+  padding: 25px;
+}
+
+button {
+  height: 10vh;
+  background-color: #1a2236;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+}
+
+#divider-shapes {
+  width: 100%;
 }

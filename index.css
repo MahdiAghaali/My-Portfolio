@@ -5,7 +5,7 @@ body {
 }
 
 p {
-  font-family: "Poppins";
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.5rem;
@@ -14,7 +14,7 @@ p {
 }
 
 h1 {
-  font-family: "Playfair Display";
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
@@ -24,7 +24,7 @@ h1 {
 header {
   position: fixed;
   width: 100vw;
-  top: 0px;
+  top: 0;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -42,7 +42,7 @@ header {
 
 #top-left-shapes {
   height: 100px;
-  left: 0px;
+  left: 0;
 }
 
 section {
@@ -65,6 +65,28 @@ button {
   color: white;
   font-size: 1.5rem;
   border: none;
+}
+
+button:hover {
+  animation: hover-anmiation 0.3s forwards linear;
+}
+
+button:disabled {
+  background-color: gray;
+}
+
+@keyframes hover-anmiation {
+  0% {
+    background-color: #1a2236;
+    color: white;
+    border: none;
+  }
+
+  100% {
+    background-color: white;
+    color: #1a2236;
+    border: 1px solid #1a2236;
+  }
 }
 
 #divider-shapes {

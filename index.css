@@ -1,3 +1,5 @@
+/* --------General------- */
+
 body {
   background-color: white;
   color: #1a2236;
@@ -5,7 +7,7 @@ body {
   background-image: url(./Resources/image_geometry_2.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom -175px right;
+  background-position: top calc(100vh - 100px) right;
 }
 
 p {
@@ -18,12 +20,14 @@ p {
 }
 
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
   line-height: 100%;
 }
+
+/* --------Header------- */
 
 header {
   width: 100%;
@@ -50,35 +54,172 @@ header {
   left: 0;
 }
 
+/* --------Sections------- */
+
 section {
   border-color: black;
   height: auto;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
-section:first-of-type {
+/* --------intro section------- */
+
+section#intro,
+section#about {
   padding: 25px;
 }
 
-button {
-  height: 10vh;
+button.dark {
+  height: 8vh;
   background-color: #1a2236;
   color: white;
   font-size: 1.5rem;
-  border: none;
+  border: 1px solid white;
   margin-bottom: 50px;
 }
 
-button:hover {
+button.dark:hover {
   background-color: white;
   color: #1a2236;
   border: 1px solid #1a2236;
 }
 
-button:disabled {
+button.dark:disabled {
   background-color: gray;
+}
+
+/* --------Projects section------- */
+
+.project {
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 1fr 5%;
+  row-gap: 25px;
+  background-color: #1a2236;
+  height: auto;
+  min-height: 300px;
+  width: 100%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.project > img {
+  grid-column: 1 / span 5;
+  grid-row: 1;
+  object-fit: cover;
+  width: 100%;
+  height: calc(100vw * 9 / 16);
+}
+
+.project > h2 {
+  grid-column: 2 / span 3;
+  grid-row: 2;
+  margin-bottom: auto;
+  margin-top: auto;
+  font-family:
+    "Trebuchet MS",
+    "Lucida Sans Unicode",
+    "Lucida Grande",
+    "Lucida Sans",
+    Arial,
+    sans-serif;
+}
+
+.project > ul {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row: 3;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.project > ul > li {
+  background-color: #98dede;
+  color: black;
+  padding: 6px;
+  float: left;
+  margin-right: 5px;
+}
+
+.project > ul > li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.project > button {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row: 4;
+  height: 50px;
+}
+
+button.light {
+  height: 8vh;
+  color: #1a2236;
+  background-color: white;
+  font-size: 1.5rem;
+  border: none;
+  margin-bottom: 15px;
+}
+
+button.light:hover {
+  color: white;
+  background-color: #1a2236;
+  border: 1px solid #1a2236;
+}
+
+button.light:disabled {
+  background-color: gray;
+}
+
+#about > ul {
+  list-style-type: none;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+#about > ul > li {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+#about > ul > li > ul {
+  list-style-type: disc;
+}
+
+#about > ul > li:nth-child(1) {
+  background-color: #1c528a;
+  background-image: url(./Resources/Sharp.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 30%;
+}
+
+#about > ul > li:nth-child(2) {
+  background-color: #e2505c;
+  background-image: url(./Resources/ic_framework.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 30%;
+}
+
+#about > ul > li:nth-child(3) {
+  background-color: #ffa200;
+  background-image: url(./Resources/ic_skills.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 30%;
 }

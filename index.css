@@ -1,13 +1,17 @@
 /* --------General------- */
 
 body {
-  background-color: white;
+  background-color: #f9f9fa;
   color: #1a2236;
   margin: 0;
   background-image: url(./Resources/image_geometry_2.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top calc(100vh - 100px) right;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
 }
 
 p {
@@ -70,7 +74,8 @@ section {
 /* --------intro section------- */
 
 section#intro,
-section#about {
+section#about,
+form {
   padding: 25px;
 }
 
@@ -87,6 +92,7 @@ button.dark:hover {
   background-color: white;
   color: #1a2236;
   border: 1px solid #1a2236;
+  cursor: pointer;
 }
 
 button.dark:disabled {
@@ -175,6 +181,7 @@ button.light:hover {
   color: white;
   background-color: #1a2236;
   border: 1px solid #1a2236;
+  cursor: pointer;
 }
 
 button.light:disabled {
@@ -222,4 +229,66 @@ button.light:disabled {
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 30%;
+}
+
+form {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-image: url(./Resources/image_geometry_1.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-top: 50px;
+}
+
+form > fieldset {
+  border-radius: 5px;
+  border: 1px solid #dfdfe0;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+form > fieldset:focus-within {
+  border-color: orange;
+  outline: orange;
+}
+
+form > fieldset > label {
+  font-size: 0.8rem;
+  color: #7d7c84;
+}
+
+form > fieldset > label > input {
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  height: 1.1rem;
+  font-size: 1.1rem;
+}
+
+form > fieldset > label > input:focus:focus-visible {
+  border: none;
+  outline: none;
+}
+
+form > textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  border-radius: 5px;
+  border: 1px solid #dfdfe0;
+  background-color: white;
+  min-height: 100px;
+  padding: 10px;
+  resize: vertical;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+form > textarea:focus-visible:focus {
+  border-color: orange;
+  outline: orange;
 }

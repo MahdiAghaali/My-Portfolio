@@ -46,6 +46,10 @@ header {
   box-sizing: border-box;
 }
 
+#desktop-nav {
+  display: none;
+}
+
 #hamburger-menu {
   font-size: 2rem;
   height: 40px;
@@ -77,6 +81,10 @@ section#intro,
 section#about,
 form {
   padding: 25px;
+}
+
+#intro button {
+  width: 100%;
 }
 
 button.dark {
@@ -113,7 +121,7 @@ button.dark:disabled {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.project > img {
+.project>img {
   grid-column: 1 / span 5;
   grid-row: 1;
   object-fit: cover;
@@ -121,7 +129,7 @@ button.dark:disabled {
   height: calc(100vw * 9 / 16);
 }
 
-.project > h2 {
+.project>h2 {
   grid-column: 2 / span 3;
   grid-row: 2;
   margin-bottom: auto;
@@ -135,7 +143,7 @@ button.dark:disabled {
     sans-serif;
 }
 
-.project > ul {
+.project>ul {
   grid-column-start: 2;
   grid-column-end: 5;
   grid-row: 3;
@@ -145,7 +153,7 @@ button.dark:disabled {
   overflow: hidden;
 }
 
-.project > ul > li {
+.project>ul>li {
   background-color: #98dede;
   color: black;
   padding: 6px;
@@ -153,7 +161,7 @@ button.dark:disabled {
   margin-right: 5px;
 }
 
-.project > ul > li a {
+.project>ul>li a {
   display: block;
   color: white;
   text-align: center;
@@ -161,7 +169,7 @@ button.dark:disabled {
   text-decoration: none;
 }
 
-.project > button {
+.project>button {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row: 4;
@@ -188,7 +196,7 @@ button.light:disabled {
   background-color: gray;
 }
 
-#about > ul {
+#about>ul {
   list-style-type: none;
   color: white;
   margin: 0;
@@ -198,16 +206,16 @@ button.light:disabled {
   font-size: 1.6rem;
 }
 
-#about > ul > li {
+#about>ul>li {
   margin-bottom: 20px;
   padding: 20px;
 }
 
-#about > ul > li > ul {
+#about>ul>li>ul {
   list-style-type: disc;
 }
 
-#about > ul > li:nth-child(1) {
+#about>ul>li:nth-child(1) {
   background-color: #1c528a;
   background-image: url(./Resources/Sharp.svg);
   background-repeat: no-repeat;
@@ -215,7 +223,7 @@ button.light:disabled {
   background-size: 30%;
 }
 
-#about > ul > li:nth-child(2) {
+#about>ul>li:nth-child(2) {
   background-color: #e2505c;
   background-image: url(./Resources/ic_framework.svg);
   background-repeat: no-repeat;
@@ -223,7 +231,7 @@ button.light:disabled {
   background-size: 30%;
 }
 
-#about > ul > li:nth-child(3) {
+#about>ul>li:nth-child(3) {
   background-color: #ffa200;
   background-image: url(./Resources/ic_skills.svg);
   background-repeat: no-repeat;
@@ -244,24 +252,24 @@ form {
   padding-top: 50px;
 }
 
-form > fieldset {
+form>fieldset {
   border-radius: 5px;
   border: 1px solid #dfdfe0;
   background-color: white;
   margin-bottom: 10px;
 }
 
-form > fieldset:focus-within {
+form>fieldset:focus-within {
   border-color: orange;
   outline: orange;
 }
 
-form > fieldset > label {
+form>fieldset>label {
   font-size: 0.8rem;
   color: #7d7c84;
 }
 
-form > fieldset > label > input {
+form>fieldset>label>input {
   margin-top: 10px;
   width: 100%;
   border: none;
@@ -269,12 +277,12 @@ form > fieldset > label > input {
   font-size: 1.1rem;
 }
 
-form > fieldset > label > input:focus:focus-visible {
+form>fieldset>label>input:focus:focus-visible {
   border: none;
   outline: none;
 }
 
-form > textarea {
+form>textarea {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   line-height: 1.1rem;
@@ -288,7 +296,133 @@ form > textarea {
   margin-bottom: 10px;
 }
 
-form > textarea:focus-visible:focus {
+form>textarea:focus-visible:focus {
   border-color: orange;
   outline: orange;
+}
+
+
+@media screen and (min-width: 600px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-image: none;
+  }
+
+  header {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    position: fixed;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-image: none;
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+  }
+
+  #desktop-nav {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header ul>li,
+  header a {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #1A2236;
+  }
+
+  header a:hover {
+    color: orange;
+    cursor: pointer;
+
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  section,
+  form {
+    padding-top: 100px !important;
+  }
+
+  #intro {
+    display: grid;
+    margin-top: 100px;
+    grid-template-columns: 10% 1fr 50%;
+    background-image: url(./Resources/Desktop/image-geometry_1.svg);
+    min-height: calc(100vh - 100px);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+  }
+
+  #intro>div {
+    grid-column: 2;
+    background-image: url(./Resources/Desktop/image_dots.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+
+  #intro h1 {
+    font-size: 5rem;
+  }
+
+  #intro p {
+    text-align: left;
+  }
+
+  #intro button {
+    width: 50%;
+  }
+
+  #Projects {
+    display: grid;
+    grid-template: 50vh 50vh/ 1fr 2fr;
+    background-image: url(./Resources/Desktop/Untitled-1.png);
+    row-gap: 30px;
+    column-gap: 30px;
+    background-size: auto;
+  }
+
+  #Projects>h1 {
+    text-align: center;
+    background-image: url(./Resources/Desktop/image_dots.svg);
+    background-repeat: no-repeat;
+    font-size: 7rem;
+    background-position: right bottom;
+    transform: rotate(-90deg);
+  }
+
+  .project {
+    box-sizing: border-box;
+    grid-template-rows: 30% auto;
+  }
+
+  .project>img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
 }

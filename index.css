@@ -46,6 +46,11 @@ header {
   box-sizing: border-box;
 }
 
+header>nav {
+  display: flex;
+  align-items: center;
+}
+
 #desktop-nav {
   display: none;
 }
@@ -90,6 +95,7 @@ button.dark {
   font-size: 1.5rem;
   border: 1px solid white;
   margin-bottom: 50px;
+  transition: all 0.3s ease-in-out;
 }
 
 button.dark:hover {
@@ -117,7 +123,7 @@ button.dark:disabled {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.project > img {
+.project>img {
   grid-column: 1 / span 5;
   grid-row: 1;
   object-fit: cover;
@@ -125,7 +131,7 @@ button.dark:disabled {
   height: calc(100vw * 9 / 16);
 }
 
-.project > h2 {
+.project>h2 {
   grid-column: 2 / span 3;
   grid-row: 2;
   margin-bottom: auto;
@@ -139,7 +145,7 @@ button.dark:disabled {
     sans-serif;
 }
 
-.project > ul {
+.project>ul {
   grid-column-start: 2;
   grid-column-end: 5;
   grid-row: 3;
@@ -149,7 +155,7 @@ button.dark:disabled {
   overflow: hidden;
 }
 
-.project > ul > li {
+.project>ul>li {
   background-color: #98dede;
   color: black;
   padding: 6px;
@@ -157,7 +163,7 @@ button.dark:disabled {
   margin-right: 5px;
 }
 
-.project > ul > li a {
+.project>ul>li a {
   display: block;
   color: white;
   text-align: center;
@@ -165,7 +171,7 @@ button.dark:disabled {
   text-decoration: none;
 }
 
-.project > button {
+.project>button {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row: 4;
@@ -183,6 +189,7 @@ button.light {
   font-size: 1.5rem;
   border: none;
   margin-bottom: 15px;
+  transition: all 0.3 ease-in-out;
 }
 
 button.light:hover {
@@ -217,7 +224,7 @@ button.light:disabled {
   color: orange;
 }
 
-#footer > ul {
+#footer>ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -226,7 +233,7 @@ button.light:disabled {
   align-items: center;
 }
 
-#about > ul {
+#about>ul {
   list-style-type: none;
   color: white;
   margin: 0;
@@ -236,12 +243,12 @@ button.light:disabled {
   font-size: 1.6rem;
 }
 
-#about > ul > li {
+#about>ul>li {
   margin-bottom: 20px;
   padding: 20px;
 }
 
-#footer > ul > li {
+#footer>ul>li {
   width: 35px;
   height: 35px;
   margin-left: 2px;
@@ -249,42 +256,42 @@ button.light:disabled {
   background-position: center;
 }
 
-#footer > ul > li:hover {
+#footer>ul>li:hover {
   background-color: #7f0000;
   border-radius: 50%;
   color: orange;
   cursor: pointer;
 }
 
-#footer > ul > li:nth-of-type(1) {
+#footer>ul>li:nth-of-type(1) {
   background-image: url(./Resources/Icons/ic_github.svg);
 }
 
-#footer > ul > li:nth-of-type(2) {
+#footer>ul>li:nth-of-type(2) {
   background-image: url(./Resources/Icons/ic_linkedin.svg);
 }
 
-#footer > ul > li:nth-of-type(3) {
+#footer>ul>li:nth-of-type(3) {
   background-image: url(./Resources/Icons/ic_stackoverflow.svg);
 }
 
-#footer > ul > li:nth-of-type(4) {
+#footer>ul>li:nth-of-type(4) {
   background-image: url(./Resources/Icons/ic_angellist.svg);
 }
 
-#footer > ul > li:nth-of-type(5) {
+#footer>ul>li:nth-of-type(5) {
   background-image: url(./Resources/Icons/ic_twitter.svg);
 }
 
-#footer > ul > li:nth-of-type(6) {
+#footer>ul>li:nth-of-type(6) {
   background-image: url(./Resources/Icons/ic_medium.svg);
 }
 
-#about > ul > li > ul {
+#about>ul>li>ul {
   list-style-type: disc;
 }
 
-#about > ul > li:nth-child(1) {
+#about>ul>li:nth-child(1) {
   background-color: #1c528a;
   background-image: url(./Resources/Sharp.svg);
   background-repeat: no-repeat;
@@ -292,7 +299,7 @@ button.light:disabled {
   background-size: 30%;
 }
 
-#about > ul > li:nth-child(2) {
+#about>ul>li:nth-child(2) {
   background-color: #e2505c;
   background-image: url(./Resources/ic_framework.svg);
   background-repeat: no-repeat;
@@ -300,7 +307,7 @@ button.light:disabled {
   background-size: 30%;
 }
 
-#about > ul > li:nth-child(3) {
+#about>ul>li:nth-child(3) {
   background-color: #ffa200;
   background-image: url(./Resources/ic_skills.svg);
   background-repeat: no-repeat;
@@ -321,24 +328,24 @@ form {
   padding-top: 50px;
 }
 
-form > fieldset {
+form>fieldset {
   border-radius: 5px;
   border: 1px solid #dfdfe0;
   background-color: white;
   margin-bottom: 10px;
 }
 
-form > fieldset:focus-within {
+form>fieldset:focus-within {
   border-color: orange;
   outline: orange;
 }
 
-form > fieldset > label {
+form>fieldset>label {
   font-size: 0.8rem;
   color: #7d7c84;
 }
 
-form > fieldset > label > input {
+form>fieldset>label>input {
   margin-top: 10px;
   width: 100%;
   border: none;
@@ -346,12 +353,12 @@ form > fieldset > label > input {
   font-size: 1.1rem;
 }
 
-form > fieldset > label > input:focus:focus-visible {
+form>fieldset>label>input:focus:focus-visible {
   border: none;
   outline: none;
 }
 
-form > textarea {
+form>textarea {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   line-height: 1.1rem;
@@ -365,7 +372,7 @@ form > textarea {
   margin-bottom: 10px;
 }
 
-form > textarea:focus-visible:focus {
+form>textarea:focus-visible:focus {
   border-color: orange;
   outline: orange;
 }
@@ -381,7 +388,7 @@ form > textarea:focus-visible:focus {
 
   header {
     width: 100%;
-    height: 100px;
+    height: 70px;
     padding: 20px;
     position: fixed;
     display: flex;
@@ -390,9 +397,17 @@ form > textarea:focus-visible:focus {
     box-sizing: border-box;
     background-image: none;
     border-bottom: 1px solid gray;
+    outline: 1px solid orange;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(8px);
     z-index: 2;
+    transition-property: height;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+  }
+
+  header:hover {
+    height: 100px;
   }
 
   #desktop-nav {
@@ -408,7 +423,7 @@ form > textarea:focus-visible:focus {
     align-items: center;
   }
 
-  header ul > li,
+  header ul>li,
   header a {
     margin-left: 10px;
     margin-right: 10px;
@@ -425,23 +440,35 @@ form > textarea:focus-visible:focus {
     display: none;
   }
 
+  #logo {
+    height: 60px;
+    width: 60px;
+    background-color: #e04b55;
+    border: 2px solid #1c518a;
+    color: #1a2236;
+    animation: corner-shaper 10s;
+    border-radius: 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
   section,
   form {
     padding-top: 100px !important;
   }
 
-  form > h1 {
+  form>h1 {
     font-size: 5rem;
     text-align: center;
   }
 
-  form > button {
+  form>button {
     margin: auto;
   }
 
   #intro {
     display: grid;
-    margin-top: 100px;
+    margin-top: 50px;
     grid-template-columns: 10% 1fr 50%;
     background-image: url(./Resources/Desktop/image-geometry_1.svg);
     min-height: calc(100vh - 100px);
@@ -450,7 +477,7 @@ form > textarea:focus-visible:focus {
     background-size: contain;
   }
 
-  #intro > div {
+  #intro>div {
     grid-column: 2;
     background-image: url(./Resources/Desktop/image_dots.svg);
     background-repeat: no-repeat;
@@ -467,6 +494,11 @@ form > textarea:focus-visible:focus {
 
   button.small {
     width: 50% !important;
+    transition: all 0.3s ease-in-out;
+  }
+
+  button.small:hover {
+    width: 55% !important;
   }
 
   #Projects {
@@ -478,7 +510,7 @@ form > textarea:focus-visible:focus {
     background-size: auto;
   }
 
-  #Projects > h1 {
+  #Projects>h1 {
     text-align: center;
     background-image: url(./Resources/Desktop/image_dots.svg);
     background-repeat: no-repeat;
@@ -492,7 +524,7 @@ form > textarea:focus-visible:focus {
     grid-template-rows: 30% auto;
   }
 
-  .project > img {
+  .project>img {
     max-height: 100%;
     max-width: 100%;
     object-fit: cover;
@@ -519,7 +551,7 @@ form > textarea:focus-visible:focus {
     padding-right: 50px;
   }
 
-  #about > ul {
+  #about>ul {
     grid-row: 1/ span 2;
     background-image: url(./Resources/Desktop/image_dots.svg);
     background-position: bottom right;
@@ -531,7 +563,7 @@ form > textarea:focus-visible:focus {
     grid-template: 1fr 1fr/ 1fr 1fr;
   }
 
-  #skills-and-frameworks > li {
+  #skills-and-frameworks>li {
     margin-bottom: 0 !important;
   }
 
@@ -563,7 +595,7 @@ form > textarea:focus-visible:focus {
     color: orange;
   }
 
-  section#footer > ul {
+  section#footer>ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -572,7 +604,7 @@ form > textarea:focus-visible:focus {
     align-items: center;
   }
 
-  section#footer > ul > li {
+  section#footer>ul>li {
     width: 40px;
     height: 40px;
     margin-left: 8px;
@@ -580,34 +612,90 @@ form > textarea:focus-visible:focus {
     background-position: center;
   }
 
-  section#footer > ul > li:hover {
+  section#footer>ul>li:hover {
     background-color: #7f0000;
     border-radius: 50%;
     color: orange;
     cursor: pointer;
   }
 
-  section#footer > ul > li:nth-of-type(1) {
+  section#footer>ul>li:nth-of-type(1) {
     background-image: url(./Resources/Icons/ic_github.svg);
   }
 
-  section#footer > ul > li:nth-of-type(2) {
+  section#footer>ul>li:nth-of-type(2) {
     background-image: url(./Resources/Icons/ic_linkedin.svg);
   }
 
-  section#footer > ul > li:nth-of-type(3) {
+  section#footer>ul>li:nth-of-type(3) {
     background-image: url(./Resources/Icons/ic_stackoverflow.svg);
   }
 
-  section#footer > ul > li:nth-of-type(4) {
+  section#footer>ul>li:nth-of-type(4) {
     background-image: url(./Resources/Icons/ic_angellist.svg);
   }
 
-  section#footer > ul > li:nth-of-type(5) {
+  section#footer>ul>li:nth-of-type(5) {
     background-image: url(./Resources/Icons/ic_twitter.svg);
   }
 
-  section#footer > ul > li:nth-of-type(6) {
+  section#footer>ul>li:nth-of-type(6) {
     background-image: url(./Resources/Icons/ic_medium.svg);
   }
+}
+
+
+@keyframes corner-shaper {
+  0% {
+    border-top-left-radius: 1% 50%;
+  }
+
+  12.5% {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+  }
+
+  25% {
+    border-top-right-radius: 1% 50%;
+  }
+
+  25.001% {
+    border-top-right-radius: 50% 1%;
+  }
+
+  37.5% {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+
+  50% {
+    border-bottom-right-radius: 50% 1%;
+  }
+
+  50.001% {
+    border-bottom-right-radius: 1% 50%;
+  }
+
+  62.5% {
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+
+  75% {
+    border-bottom-left-radius: 1% 50%;
+  }
+
+  75.001% {
+    border-bottom-left-radius: 50% 1%;
+  }
+
+  87.5% {
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+  }
+
+  100% {
+    border-top-left-radius: 50% 1%;
+  }
+
 }

@@ -526,12 +526,12 @@ form > textarea:focus-visible:focus {
     background-repeat: no-repeat;
   }
 
-  #skills {
+  #skills-and-frameworks {
     display: grid;
     grid-template: 1fr 1fr/ 1fr 1fr;
   }
 
-  #skills > li {
+  #skills-and-frameworks > li {
     margin-bottom: 0 !important;
   }
 

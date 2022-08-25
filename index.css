@@ -117,7 +117,7 @@ button.dark:disabled {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.project>img {
+.project > img {
   grid-column: 1 / span 5;
   grid-row: 1;
   object-fit: cover;
@@ -125,7 +125,7 @@ button.dark:disabled {
   height: calc(100vw * 9 / 16);
 }
 
-.project>h2 {
+.project > h2 {
   grid-column: 2 / span 3;
   grid-row: 2;
   margin-bottom: auto;
@@ -139,7 +139,7 @@ button.dark:disabled {
     sans-serif;
 }
 
-.project>ul {
+.project > ul {
   grid-column-start: 2;
   grid-column-end: 5;
   grid-row: 3;
@@ -149,7 +149,7 @@ button.dark:disabled {
   overflow: hidden;
 }
 
-.project>ul>li {
+.project > ul > li {
   background-color: #98dede;
   color: black;
   padding: 6px;
@@ -157,7 +157,7 @@ button.dark:disabled {
   margin-right: 5px;
 }
 
-.project>ul>li a {
+.project > ul > li a {
   display: block;
   color: white;
   text-align: center;
@@ -165,7 +165,7 @@ button.dark:disabled {
   text-decoration: none;
 }
 
-.project>button {
+.project > button {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row: 4;
@@ -196,7 +196,7 @@ button.light:disabled {
   background-color: gray;
 }
 
-#about>ul {
+#about > ul {
   list-style-type: none;
   color: white;
   margin: 0;
@@ -206,16 +206,16 @@ button.light:disabled {
   font-size: 1.6rem;
 }
 
-#about>ul>li {
+#about > ul > li {
   margin-bottom: 20px;
   padding: 20px;
 }
 
-#about>ul>li>ul {
+#about > ul > li > ul {
   list-style-type: disc;
 }
 
-#about>ul>li:nth-child(1) {
+#about > ul > li:nth-child(1) {
   background-color: #1c528a;
   background-image: url(./Resources/Sharp.svg);
   background-repeat: no-repeat;
@@ -223,7 +223,7 @@ button.light:disabled {
   background-size: 30%;
 }
 
-#about>ul>li:nth-child(2) {
+#about > ul > li:nth-child(2) {
   background-color: #e2505c;
   background-image: url(./Resources/ic_framework.svg);
   background-repeat: no-repeat;
@@ -231,7 +231,7 @@ button.light:disabled {
   background-size: 30%;
 }
 
-#about>ul>li:nth-child(3) {
+#about > ul > li:nth-child(3) {
   background-color: #ffa200;
   background-image: url(./Resources/ic_skills.svg);
   background-repeat: no-repeat;
@@ -252,24 +252,24 @@ form {
   padding-top: 50px;
 }
 
-form>fieldset {
+form > fieldset {
   border-radius: 5px;
   border: 1px solid #dfdfe0;
   background-color: white;
   margin-bottom: 10px;
 }
 
-form>fieldset:focus-within {
+form > fieldset:focus-within {
   border-color: orange;
   outline: orange;
 }
 
-form>fieldset>label {
+form > fieldset > label {
   font-size: 0.8rem;
   color: #7d7c84;
 }
 
-form>fieldset>label>input {
+form > fieldset > label > input {
   margin-top: 10px;
   width: 100%;
   border: none;
@@ -277,12 +277,12 @@ form>fieldset>label>input {
   font-size: 1.1rem;
 }
 
-form>fieldset>label>input:focus:focus-visible {
+form > fieldset > label > input:focus:focus-visible {
   border: none;
   outline: none;
 }
 
-form>textarea {
+form > textarea {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   line-height: 1.1rem;
@@ -296,7 +296,7 @@ form>textarea {
   margin-bottom: 10px;
 }
 
-form>textarea:focus-visible:focus {
+form > textarea:focus-visible:focus {
   border-color: orange;
   outline: orange;
 }
@@ -339,7 +339,7 @@ form>textarea:focus-visible:focus {
     align-items: center;
   }
 
-  header ul>li,
+  header ul > li,
   header a {
     margin-left: 10px;
     margin-right: 10px;
@@ -361,6 +361,15 @@ form>textarea:focus-visible:focus {
     padding-top: 100px !important;
   }
 
+  form > h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  form > button {
+    margin: auto;
+  }
+
   #intro {
     display: grid;
     margin-top: 100px;
@@ -372,7 +381,7 @@ form>textarea:focus-visible:focus {
     background-size: contain;
   }
 
-  #intro>div {
+  #intro > div {
     grid-column: 2;
     background-image: url(./Resources/Desktop/image_dots.svg);
     background-repeat: no-repeat;
@@ -400,7 +409,7 @@ form>textarea:focus-visible:focus {
     background-size: auto;
   }
 
-  #Projects>h1 {
+  #Projects > h1 {
     text-align: center;
     background-image: url(./Resources/Desktop/image_dots.svg);
     background-repeat: no-repeat;
@@ -414,7 +423,7 @@ form>textarea:focus-visible:focus {
     grid-template-rows: 30% auto;
   }
 
-  .project>img {
+  .project > img {
     max-height: 100%;
     max-width: 100%;
     object-fit: cover;
@@ -439,10 +448,9 @@ form>textarea:focus-visible:focus {
     grid-row: 1;
     grid-column: 2;
     padding-right: 50px;
-
   }
 
-  #about>ul {
+  #about > ul {
     grid-row: 1/ span 2;
     background-image: url(./Resources/Desktop/image_dots.svg);
     background-position: bottom right;
@@ -452,11 +460,16 @@ form>textarea:focus-visible:focus {
   #skills {
     display: grid;
     grid-template: 1fr 1fr/ 1fr 1fr;
-
   }
 
-  #skills>li {
+  #skills > li {
     margin-bottom: 0 !important;
   }
 
+  form {
+    background-image: url(./Resources/Desktop/image-geometry_7.svg) !important;
+    background-position: bottom right !important;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
 }

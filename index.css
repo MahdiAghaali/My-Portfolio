@@ -249,6 +249,7 @@ button.light:disabled {
   margin-left: 2px;
   background-repeat: no-repeat;
   background-position: center;
+  transition: all 0.5s;
 }
 
 #footer > ul > li:hover {
@@ -256,6 +257,7 @@ button.light:disabled {
   border-radius: 50%;
   color: orange;
   cursor: pointer;
+  animation: bounce 0.5s forwards ease-in-out;
 }
 
 #footer > ul > li:nth-of-type(1) {
@@ -697,4 +699,14 @@ form > textarea:focus-visible:focus {
   box-shadow: 0px 0px 23px 6px #172b4d52;
   animation: shadow-breathe 1s infinite ease-in-out;
   transform: scale(1.05);
+}
+
+@keyframes bounce {
+	0% {
+		transform:         translateY(0)
+	}
+
+	100% {
+		transform:         translateY(-10px)
+	}
 }

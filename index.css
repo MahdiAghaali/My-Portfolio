@@ -136,8 +136,13 @@ button.dark:disabled {
   grid-row: 2;
   margin-bottom: auto;
   margin-top: auto;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family:
+    "Trebuchet MS",
+    "Lucida Sans Unicode",
+    "Lucida Grande",
+    "Lucida Sans",
+    Arial,
+    sans-serif;
 }
 
 .project > ul {
@@ -696,17 +701,17 @@ form > textarea:focus-visible:focus {
 }
 
 .card:hover {
-  box-shadow: 0px 0px 23px 6px #172b4d52;
+  box-shadow: 0 0 23px 6px #172b4d52;
   animation: shadow-breathe 1s infinite ease-in-out;
   transform: scale(1.05);
 }
 
 @keyframes bounce {
-	0% {
-		transform:         translateY(0)
-	}
+  0% {
+    transform: translateY(0);
+  }
 
-	100% {
-		transform:         translateY(-10px)
-	}
+  100% {
+    transform: translateY(-10px);
+  }
 }

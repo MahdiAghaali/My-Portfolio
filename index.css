@@ -446,7 +446,6 @@ form > textarea:focus-visible:focus {
     height: 60px;
     width: 60px;
     background-color: #e04b55;
-    border: 2px solid #1c518a;
     color: #1a2236;
     animation: corner-shaper 10s;
     border-radius: 50%;

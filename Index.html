@@ -5,15 +5,32 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="./Contents/index.css" />
+  <link rel="stylesheet" href="./Contents/Index-desktop.css" />
+  <script src="https://kit.fontawesome.com/bee9655978.js" crossorigin="anonymous"></script>
   <title>Mahdi Aghaali</title>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <img src="./Resources/icons8-menu.svg" id="hamburger-menu" alt="menu" />
+  <header id="header">
+    <nav id="header_nav">
+      <i class="fa-solid fa-bars" id="hamburger-menu"></i>
       <ul id="desktop-nav">
+        <li>
+          <a href="#intro">Hello</a>
+        </li>
+        <li>
+          <a href="#Projects">Portfolio</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#contact-form">contact</a>
+        </li>
+      </ul>
+      <ul id="mobile-nav">
+        <i class="fa-solid fa-xmark" id="closeMenuBtn"></i>
         <li>
           <a href="#intro">Hello</a>
         </li>
@@ -44,7 +61,7 @@
   <section id="Projects">
     <h1>Projects</h1>
     <div class="project">
-      <img src="./Resources/Pictures/Evaluation_img.jpg" alt="evaluation-system" />
+      <img src="./Contents/Resources/Pictures/Evaluation_img.jpg" alt="evaluation-system" />
       <h2>Evaluation System</h2>
       <ul>
         <li>Html</li>
@@ -54,7 +71,7 @@
       <button type="button" class="dark">See this project &#8594;</button>
     </div>
     <div class="project">
-      <img src="./Resources/Pictures/Correspondence_img.jpg" alt="correspondence-system" />
+      <img src="./Contents/Resources/Pictures/Correspondence_img.jpg" alt="correspondence-system" />
       <h2>Correspondence System</h2>
       <ul>
         <li>Html</li>
@@ -143,6 +160,7 @@
       </li>
     </ul>
   </section>
+  <script src="./Scripts/Index-mobile.js"></script>
 </body>
 
 </html>

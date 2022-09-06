@@ -1,40 +1,28 @@
 const hamburgerMenu = document.getElementById('hamburger-menu');
-hamburgerMenu.addEventListener('click', showMobileMenu);
+const closeMenuBtn = document.getElementById('closeMenuBtn');
+const header = document.getElementById('header');
+const headerNav = document.getElementById('header_nav');
+const mobileNav = document.getElementById('mobile-nav');
 
 function showMobileMenu() {
-  const header = document.getElementById('header');
-  header.style.padding = '0';
-  header.style.flexDirection = 'column';
-  header.style.justifyContent = 'center';
-  header.style.width = '100vw';
-  header.style.height = '100vh';
-
-  const headerNav = document.getElementById('header_nav');
-  headerNav.style.flexDirection = 'column';
-  headerNav.style.width = '100%';
-  headerNav.style.height = '100%';
-
-  const mobileNav = document.getElementById('mobile-nav');
-  mobileNav.style.display = 'block';
-  hamburgerMenu.style.display = 'none';
+  header.classList.add('open');
+  headerNav.classList.add('open');
+  mobileNav.classList.add('open');
+  hamburgerMenu.classList.add('open');
 }
 
-const closeMenuBtn = document.getElementById('closeMenuBtn');
+function closeMobileMenu() {
+  header.classList.remove('open');
+  headerNav.classList.remove('open');
+  mobileNav.classList.remove('open');
+  hamburgerMenu.classList.remove('open');
+}
+
+const aTagArray = mobileNav.querySelectorAll('li a');
+aTagArray.forEach((element) => {
+  element.addEventListener('click', closeMobileMenu);
+});
+
+hamburgerMenu.addEventListener('click', showMobileMenu);
+
 closeMenuBtn.addEventListener('click', closeMobileMenu);
-
-function closeMobileMenu(){
-  const header = document.getElementById('header');
-  header.style.padding = '20px';
-  header.style.flexDirection = 'row-reverse';
-  header.style.justifyContent = 'space-between';
-  header.style.width = '100vw';
-  header.style.height = '100px';
-
-  const headerNav = document.getElementById('header_nav');
-  headerNav.style.width = '';
-  
-  const mobileNav = document.getElementById('mobile-nav');
-  mobileNav.style.display = 'none';
-  hamburgerMenu.style.display = 'block';
-}
-

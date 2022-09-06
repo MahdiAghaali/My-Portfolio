@@ -49,7 +49,7 @@ header {
   box-sizing: border-box;
 }
 
-header>nav {
+header > nav {
   display: flex;
   align-items: center;
 }
@@ -63,6 +63,11 @@ header>nav {
   height: 40px;
   width: 40px;
   text-align: center;
+  transition: all 1;
+}
+
+#hamburger-menu.open {
+  display: none;
 }
 
 #top-left-shapes {
@@ -70,29 +75,46 @@ header>nav {
   left: 0;
 }
 
-#mobile-nav {
+#header.open {
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#header_nav.open {
+  flex-direction: column;
+  width: 100%;
   height: 100%;
-  background-color: white;
-  align-self: stretch;
-  font-size: 2rem;
-  font-family: arial;
-  line-height: 4rem;
-  list-style: none;
-  margin: 0 !important;
-  padding-left: 0;
-  padding-top: 18vh;
-  text-align: center;
-  display: none;
-  position: relative;
-  background-image: url(./Resources/image_geometry_2.svg);
-  background-position: bottom;
-  background-repeat: no-repeat;
+}
+
+#mobile-nav.open {
+  display: block;
+  animation: openMenu 0.5s ease-in-out forwards;
+}
+
+@keyframes openMenu {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
 }
 
 #closeMenuBtn {
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 2;
+  font-size: 2rem;
+  display: none;
+}
+
+#header_nav.open #closeMenuBtn {
+  display: block;
 }
 
 /* --------Sections------- */
@@ -151,7 +173,7 @@ button.dark:disabled {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.project>img {
+.project > img {
   grid-column: 1 / span 5;
   grid-row: 1;
   object-fit: cover;
@@ -159,7 +181,7 @@ button.dark:disabled {
   height: calc(100vw * 9 / 16);
 }
 
-.project>h2 {
+.project > h2 {
   grid-column: 2 / span 3;
   grid-row: 2;
   margin-bottom: auto;
@@ -173,7 +195,7 @@ button.dark:disabled {
     sans-serif;
 }
 
-.project>ul {
+.project > ul {
   grid-column-start: 2;
   grid-column-end: 5;
   grid-row: 3;
@@ -183,7 +205,7 @@ button.dark:disabled {
   overflow: hidden;
 }
 
-.project>ul>li {
+.project > ul > li {
   background-color: #98dede;
   color: black;
   padding: 6px;
@@ -191,7 +213,7 @@ button.dark:disabled {
   margin-right: 5px;
 }
 
-.project>ul>li a {
+.project > ul > li a {
   display: block;
   color: white;
   text-align: center;
@@ -199,7 +221,7 @@ button.dark:disabled {
   text-decoration: none;
 }
 
-.project>button {
+.project > button {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row: 4;
@@ -248,11 +270,7 @@ button.light:disabled {
   text-decoration: none;
 }
 
-#footer a:hover {
-  color: orange;
-}
-
-#footer>ul {
+#footer > ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -261,7 +279,7 @@ button.light:disabled {
   align-items: center;
 }
 
-#about>ul {
+#about > ul {
   list-style-type: none;
   color: white;
   margin: 0;
@@ -271,12 +289,12 @@ button.light:disabled {
   font-size: 1.6rem;
 }
 
-#about>ul>li {
+#about > ul > li {
   margin-bottom: 20px;
   padding: 20px;
 }
 
-#footer>ul>li {
+#footer > ul > li {
   width: 35px;
   height: 35px;
   margin-left: 2px;
@@ -285,7 +303,7 @@ button.light:disabled {
   transition: all 0.5s;
 }
 
-#footer>ul>li:hover {
+#footer > ul > li:hover {
   background-color: #7f0000;
   border-radius: 50%;
   color: orange;
@@ -293,35 +311,35 @@ button.light:disabled {
   animation: bounce 0.5s forwards ease-in-out;
 }
 
-#footer>ul>li:nth-of-type(1) {
+#footer > ul > li:nth-of-type(1) {
   background-image: url(./Resources/Icons/ic_github.svg);
 }
 
-#footer>ul>li:nth-of-type(2) {
+#footer > ul > li:nth-of-type(2) {
   background-image: url(./Resources/Icons/ic_linkedin.svg);
 }
 
-#footer>ul>li:nth-of-type(3) {
+#footer > ul > li:nth-of-type(3) {
   background-image: url(./Resources/Icons/ic_stackoverflow.svg);
 }
 
-#footer>ul>li:nth-of-type(4) {
+#footer > ul > li:nth-of-type(4) {
   background-image: url(./Resources/Icons/ic_angellist.svg);
 }
 
-#footer>ul>li:nth-of-type(5) {
+#footer > ul > li:nth-of-type(5) {
   background-image: url(./Resources/Icons/ic_twitter.svg);
 }
 
-#footer>ul>li:nth-of-type(6) {
+#footer > ul > li:nth-of-type(6) {
   background-image: url(./Resources/Icons/ic_medium.svg);
 }
 
-#about>ul>li>ul {
+#about > ul > li > ul {
   list-style-type: disc;
 }
 
-#about>ul>li:nth-child(1) {
+#about > ul > li:nth-child(1) {
   background-color: #1c528a;
   background-image: url(./Resources/Sharp.svg);
   background-repeat: no-repeat;
@@ -329,7 +347,7 @@ button.light:disabled {
   background-size: 30%;
 }
 
-#about>ul>li:nth-child(2) {
+#about > ul > li:nth-child(2) {
   background-color: #e2505c;
   background-image: url(./Resources/ic_framework.svg);
   background-repeat: no-repeat;
@@ -337,7 +355,7 @@ button.light:disabled {
   background-size: 30%;
 }
 
-#about>ul>li:nth-child(3) {
+#about > ul > li:nth-child(3) {
   background-color: #ffa200;
   background-image: url(./Resources/ic_skills.svg);
   background-repeat: no-repeat;
@@ -358,24 +376,24 @@ form {
   padding-top: 50px;
 }
 
-form>fieldset {
+form > fieldset {
   border-radius: 5px;
   border: 1px solid #dfdfe0;
   background-color: white;
   margin-bottom: 10px;
 }
 
-form>fieldset:focus-within {
+form > fieldset:focus-within {
   border-color: orange;
   outline: orange;
 }
 
-form>fieldset>label {
+form > fieldset > label {
   font-size: 0.8rem;
   color: #7d7c84;
 }
 
-form>fieldset>label>input {
+form > fieldset > label > input {
   margin-top: 10px;
   width: 100%;
   border: none;
@@ -383,12 +401,12 @@ form>fieldset>label>input {
   font-size: 1.1rem;
 }
 
-form>fieldset>label>input:focus:focus-visible {
+form > fieldset > label > input:focus:focus-visible {
   border: none;
   outline: none;
 }
 
-form>textarea {
+form > textarea {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   line-height: 1.1rem;
@@ -402,7 +420,42 @@ form>textarea {
   margin-bottom: 10px;
 }
 
-form>textarea:focus-visible:focus {
+form > textarea:focus-visible:focus {
   border-color: orange;
   outline: orange;
+}
+
+#mobile-nav {
+  height: 0;
+  background-color: white;
+  align-self: stretch;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 4rem;
+  list-style: none;
+  margin: 0 !important;
+  padding-left: 0;
+  padding-top: 18vh;
+  text-align: center;
+  display: none;
+  position: relative;
+  background-image: url(./Resources/image_geometry_2.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#mobile-nav a {
+  text-decoration: none;
+  color: #1a2236;
+}
+
+#footer a:hover {
+  color: orange;
+}
+
+#mobile-nav a:hover {
+  text-decoration: none;
+  color: #1c528a;
+  cursor: pointer;
 }

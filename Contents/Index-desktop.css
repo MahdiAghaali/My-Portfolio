@@ -90,7 +90,7 @@
     min-height: calc(100vh - 100px);
     background-repeat: no-repeat;
     background-position: right top;
-    background-size: contain;
+    background-size: 50%;
   }
 
   #intro > div {

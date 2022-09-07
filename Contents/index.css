@@ -140,12 +140,12 @@ form {
 }
 
 button.dark {
-  height: 3.5rem;
+  height: 3rem;
   background-color: #1a2236;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border: 1px solid white;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -218,7 +218,6 @@ button.dark:disabled {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row: 4;
-  height: 50px;
 }
 
 #intro button {
@@ -226,12 +225,12 @@ button.dark:disabled {
 }
 
 button.light {
-  height: 3.5rem;
+  height: 3rem;
   color: #1a2236;
   background-color: white;
   border: 1px solid #1a2236;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
   transition: all 0.3s ease-in-out;
 }
 

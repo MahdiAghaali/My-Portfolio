@@ -46,3 +46,33 @@ const projectsObject = {
   }
   
   createProjects();
+  
+  // eslint-disable-next-line no-unused-vars
+  function openProject(btn) {
+    const projectID = btn.parentElement.id;
+    const projectData = projectsObject[projectID];
+    const popupHeader = document.getElementById('popupHeader');
+    const popupTools = document.getElementById('popupTools');
+    const popupText = document.getElementById('popupText');
+    const popupImage = document.getElementById('popupImage');
+    const popup = document.getElementById('popup');
+  
+    popupHeader.innerHTML = projectData.name;
+    popupImage.alt = projectData.name;
+    popupImage.src = projectData.image;
+    popupText.innerHTML = projectData.text;
+    popupTools.innerHTML = '';
+    for (let tool in projectData.tools) {
+      tool = projectData.tools[tool];
+      const htmlString = `<li>${tool}</li>`;
+      popupTools.insertAdjacentHTML('beforeend', htmlString);
+    }
+    popup.style.display = 'flex';
+  }
+  
+  function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
+  }
+  const closePopupbtn = document.getElementById('closePopup');
+  closePopupbtn.addEventListener('click', closePopup);

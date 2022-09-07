@@ -15,10 +15,10 @@ body {
   flex-direction: column;
   align-content: center;
   justify-content: flex-start;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 p {
-  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.5rem;
@@ -27,7 +27,6 @@ p {
 }
 
 h1 {
-  font-family: "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
@@ -141,7 +140,7 @@ form {
 }
 
 button.dark {
-  height: 8vh;
+  height: 3.5rem;
   background-color: #1a2236;
   color: white;
   font-size: 1.5rem;
@@ -166,13 +165,12 @@ button.dark:disabled {
 .project {
   display: grid;
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
-  row-gap: 25px;
+  row-gap: 10px;
   background-color: #1a2236;
   height: auto;
   min-height: 300px;
   width: 100%;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .project > img {
@@ -188,13 +186,6 @@ button.dark:disabled {
   grid-row: 2;
   margin-bottom: auto;
   margin-top: auto;
-  font-family:
-    "Trebuchet MS",
-    "Lucida Sans Unicode",
-    "Lucida Grande",
-    "Lucida Sans",
-    Arial,
-    sans-serif;
 }
 
 .project > ul {
@@ -235,13 +226,13 @@ button.dark:disabled {
 }
 
 button.light {
-  height: 8vh;
+  height: 3.5rem;
   color: #1a2236;
   background-color: white;
+  border: 1px solid #1a2236;
   font-size: 1.5rem;
-  border: none;
   margin-bottom: 15px;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 button.light:hover {
@@ -256,7 +247,6 @@ button.light:disabled {
 }
 
 #footer {
-  font-family: Arial, Helvetica, sans-serif;
   padding-top: 0 !important;
   height: 100px;
   background-color: #1a2236;
@@ -287,13 +277,110 @@ button.light:disabled {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
+}
+
+form {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-image: url(./Resources/image_geometry_1.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-top: 50px;
+}
+
+form > fieldset {
+  border-radius: 5px;
+  border: 1px solid #dfdfe0;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+form > fieldset:focus-within {
+  border-color: orange;
+  outline: orange;
+}
+
+form > fieldset > label {
+  font-size: 0.8rem;
+  color: #7d7c84;
+}
+
+form > fieldset > label > input {
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  height: 1.1rem;
+  font-size: 1.1rem;
+}
+
+form > fieldset > label > input:focus:focus-visible {
+  border: none;
+  outline: none;
+}
+
+form > textarea {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  border-radius: 5px;
+  border: 1px solid #dfdfe0;
+  background-color: white;
+  min-height: 100px;
+  padding: 10px;
+  resize: vertical;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+form > textarea:focus-visible:focus {
+  border-color: orange;
+  outline: orange;
+}
+
+#mobile-nav {
+  height: 0;
+  background-color: white;
+  align-self: stretch;
+  font-size: 2rem;
+  line-height: 4rem;
+  list-style: none;
+  margin: 0 !important;
+  padding-left: 0;
+  padding-top: 18vh;
+  text-align: center;
+  display: none;
+  position: relative;
+  background-image: url(./Resources/image_geometry_2.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#mobile-nav a {
+  text-decoration: none;
+  color: #1a2236;
+}
+
+#footer a:hover {
+  color: orange;
+}
+
+#mobile-nav a:hover {
+  text-decoration: none;
+  color: #1c528a;
+  cursor: pointer;
 }
 
 #about > ul > li {
   margin-bottom: 20px;
   padding: 20px;
+}
+
+#about > ul > li > ul {
+  list-style-type: disc;
 }
 
 #footer > ul > li {
@@ -337,10 +424,6 @@ button.light:disabled {
   background-image: url(./Resources/Icons/ic_medium.svg);
 }
 
-#about > ul > li > ul {
-  list-style-type: disc;
-}
-
 #about > ul > li:nth-child(1) {
   background-color: #1c528a;
   background-image: url(./Resources/Sharp.svg);
@@ -363,101 +446,4 @@ button.light:disabled {
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 30%;
-}
-
-form {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  flex-direction: column;
-  background-image: url(./Resources/image_geometry_1.svg);
-  background-repeat: no-repeat;
-  background-position: top left;
-  padding-top: 50px;
-}
-
-form > fieldset {
-  border-radius: 5px;
-  border: 1px solid #dfdfe0;
-  background-color: white;
-  margin-bottom: 10px;
-}
-
-form > fieldset:focus-within {
-  border-color: orange;
-  outline: orange;
-}
-
-form > fieldset > label {
-  font-size: 0.8rem;
-  color: #7d7c84;
-}
-
-form > fieldset > label > input {
-  margin-top: 10px;
-  width: 100%;
-  border: none;
-  height: 1.1rem;
-  font-size: 1.1rem;
-}
-
-form > fieldset > label > input:focus:focus-visible {
-  border: none;
-  outline: none;
-}
-
-form > textarea {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.1rem;
-  border-radius: 5px;
-  border: 1px solid #dfdfe0;
-  background-color: white;
-  min-height: 100px;
-  padding: 10px;
-  resize: vertical;
-  overflow: auto;
-  margin-bottom: 10px;
-}
-
-form > textarea:focus-visible:focus {
-  border-color: orange;
-  outline: orange;
-}
-
-#mobile-nav {
-  height: 0;
-  background-color: white;
-  align-self: stretch;
-  font-size: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 4rem;
-  list-style: none;
-  margin: 0 !important;
-  padding-left: 0;
-  padding-top: 18vh;
-  text-align: center;
-  display: none;
-  position: relative;
-  background-image: url(./Resources/image_geometry_2.svg);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-#mobile-nav a {
-  text-decoration: none;
-  color: #1a2236;
-}
-
-#footer a:hover {
-  color: orange;
-}
-
-#mobile-nav a:hover {
-  text-decoration: none;
-  color: #1c528a;
-  cursor: pointer;
 }

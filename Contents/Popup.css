@@ -1,0 +1,98 @@
+
+#popup {
+  position: fixed;
+  width: 90vw;
+  height: calc(100vh - 10vw);
+  left: 5vw;
+  top: 5vw;
+  margin: auto;
+  background-color: white;
+  border: 1px solid gray;
+  display: none;
+  flex-direction: column;
+}
+
+#popupContent {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+#closePopup {
+  text-align: center;
+  font-size: 2rem;
+  width: 5vh;
+  height: 5vh;
+  line-height: 5vh;
+  color: #1a2236;
+  border-radius: 50%;
+  align-self: flex-end;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#closePopup:hover {
+  background-color: #f9f9fa;
+  color: #2d4581;
+  cursor: pointer;
+}
+
+#popupHeader {
+  font-size: 2rem;
+  margin: 0;
+}
+
+#popupTools {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-left: 5vw;
+  margin-bottom: 5vw;
+}
+
+#popupTools > li {
+  border: 1px solid gray;
+  color: gray;
+  padding: 6px;
+  float: left;
+  margin-right: 5px;
+}
+
+#popupImage {
+  max-height: 30vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+#popupText {
+  padding: 5vw;
+  word-break: break-word;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#buttonContainer > button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  #popup {
+    z-index: 5;
+    height: 95vh;
+    top: 2.5vh;
+  }
+
+  #popupTools {
+    margin-bottom: 30px;
+  }
+
+  #buttonContainer {
+    flex-direction: row;
+  }
+}

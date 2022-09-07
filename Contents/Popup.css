@@ -10,17 +10,13 @@
   border: 1px solid gray;
   display: none;
   flex-direction: column;
-}
-
-#popupContent {
-  width: 100%;
-  height: 100%;
+  box-sizing: border-box;
   overflow: auto;
 }
 
 #closePopup {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   width: 5vh;
   height: 5vh;
   line-height: 5vh;
@@ -29,6 +25,8 @@
   align-self: flex-end;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
+  position: fixed;
+  background-color: #ffffff85;
 }
 
 #closePopup:hover {
@@ -68,6 +66,7 @@
 #popupText {
   padding: 5vw;
   word-break: break-word;
+  text-align: left;
 }
 
 #buttonContainer {
@@ -86,13 +85,23 @@
     z-index: 5;
     height: 95vh;
     top: 2.5vh;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   #popupTools {
     margin-bottom: 30px;
+    padding: 0;
   }
 
   #buttonContainer {
     flex-direction: row;
+  }
+
+  #popupImage {
+    max-height: none;
+    max-width: 100%;
+    object-fit: cover;
   }
 }

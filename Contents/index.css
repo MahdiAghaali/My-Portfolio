@@ -9,7 +9,7 @@ body {
   margin: 0;
   background-image: url(./Resources/image_geometry_2.svg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 50%;
   background-position: top calc(100vh - 100px) right;
   display: flex;
   flex-direction: column;

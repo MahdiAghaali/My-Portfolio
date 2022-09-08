@@ -6,7 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./Contents/index.css" />
+  <link rel="stylesheet" href="./Contents/Popup.css" />
   <link rel="stylesheet" href="./Contents/Index-desktop.css" />
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <script src="https://kit.fontawesome.com/bee9655978.js" crossorigin="anonymous"></script>
   <title>Mahdi Aghaali</title>
 </head>
@@ -60,26 +62,6 @@
   </section>
   <section id="Projects">
     <h1>Projects</h1>
-    <div class="project">
-      <img src="./Contents/Resources/Pictures/Evaluation_img.jpg" alt="evaluation-system" />
-      <h2>Evaluation System</h2>
-      <ul>
-        <li>Html</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-      </ul>
-      <button type="button" class="dark">See this project &#8594;</button>
-    </div>
-    <div class="project">
-      <img src="./Contents/Resources/Pictures/Correspondence_img.jpg" alt="correspondence-system" />
-      <h2>Correspondence System</h2>
-      <ul>
-        <li>Html</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-      </ul>
-      <button type="button" class="dark">See this project &#8594;</button>
-    </div>
   </section>
   <section id="about">
     <div id="about-info">
@@ -160,7 +142,29 @@
       </li>
     </ul>
   </section>
+  <div id="popup">
+    <i class="fa-solid fa-xmark" id="closePopup"></i>
+    <h2 id="popupHeader">POPUP HEADER</h2>
+      <ul id="popupTools">
+      </ul>
+      <img id="popupImage" src="./Contents/Resources/Pictures/Correspondence_img.jpg" alt="">
+      <p id="popupText">
+      </p>
+      <div id="buttonContainer">
+        <button class="light" id="projectLink">See Live <i class="fa-solid fa-right-from-bracket"></i></button>
+        <button class="dark" id="projectSource">See source <i class="fa-brands fa-github"></i></button>
+      </div>
+      <div id="otherProjects">
+        <a>
+          &#10229; Previous Project
+        </a>
+        <a>
+          next Project &#10230;
+        </a>
+      </div>
+  </div>
   <script src="./Scripts/Index-mobile.js"></script>
+  <script src="./Scripts/Popup.js"></script>
 </body>
 
 </html>

@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./Contents/index.css" />
   <link rel="stylesheet" href="./Contents/Popup.css" />
-  <link rel="stylesheet" href="./Contents/FormValidation.css">
   <link rel="stylesheet" href="./Contents/Index-desktop.css" />
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <script src="https://kit.fontawesome.com/bee9655978.js" crossorigin="anonymous"></script>
@@ -110,22 +109,21 @@
     </p>
     <fieldset>
       <label for="customer-name">
-        Your name <span class="errorText"></span>
+        Your name
         <br />
         <input id="customer-name" name="customer-name" type="text" placeholder="Full name" maxlength="30" required />
       </label>
     </fieldset>
     <fieldset>
       <label for="customer-email">
-        Your email <span class="errorText"></span>
+        Your email
         <br />
         <input id="customer-email" name="customer-email" type="email" placeholder="something@domain.com" required />
       </label>
     </fieldset>
-    <span class="errorText"></span>
     <textarea id="customer-message" name="customer-message" maxlength="500" placeholder="Enter your message here..."
       required></textarea>
-    <button id="btn-submit" class="dark small" type="button" name="submit1">Start collaboration</button>
+    <button class="dark small" type="submit" name="submit">Start collaboration</button>
   </form>
   <section id="footer">
     <a href="https://www.linkedin.com/in/mahdi-aghaali/" target="_blank" rel="noopener">Get my CV &#10515;</a>
@@ -147,27 +145,26 @@
   <div id="popup">
     <i class="fa-solid fa-xmark" id="closePopup"></i>
     <h2 id="popupHeader">POPUP HEADER</h2>
-    <ul id="popupTools">
-    </ul>
-    <img id="popupImage" src="./Contents/Resources/Pictures/Correspondence_img.jpg" alt="">
-    <p id="popupText">
-    </p>
-    <div id="buttonContainer">
-      <button class="light" id="projectLink">See Live <i class="fa-solid fa-right-from-bracket"></i></button>
-      <button class="dark" id="projectSource">See source <i class="fa-brands fa-github"></i></button>
-    </div>
-    <div id="otherProjects">
-      <a>
-        &#10229; Previous Project
-      </a>
-      <a>
-        next Project &#10230;
-      </a>
-    </div>
+      <ul id="popupTools">
+      </ul>
+      <img id="popupImage" src="./Contents/Resources/Pictures/Correspondence_img.jpg" alt="">
+      <p id="popupText">
+      </p>
+      <div id="buttonContainer">
+        <button class="light" id="projectLink">See Live <i class="fa-solid fa-right-from-bracket"></i></button>
+        <button class="dark" id="projectSource">See source <i class="fa-brands fa-github"></i></button>
+      </div>
+      <div id="otherProjects">
+        <a>
+          &#10229; Previous Project
+        </a>
+        <a>
+          next Project &#10230;
+        </a>
+      </div>
   </div>
   <script src="./Scripts/Index-mobile.js"></script>
   <script src="./Scripts/Popup.js"></script>
-  <script src="./Scripts/FromValidation.js"></script>
 </body>
 
 </html>

@@ -21,9 +21,23 @@ const isValidEmail = (email) => {
   return eamilPattern.test(email);
 };
 
+function checkEmail() {
+  const customerEmailError = customerEmail.parentElement.children[0];
+  const str = customerEmail.value;
+  if (str !== str.toLowerCase()) {
+    customerEmailError.innerHTML = 'E-mail has to be lowercase';
+    setInvalid(customerEmail);
+  } else {
+    customerEmailError.innerHTML = '';
+    setValid(customerEmail);
+  }
+}
+const customerEmail = document.getElementById('customer-email');
+customerEmail.addEventListener('input', checkEmail);
+
 function hasInvalidElement() {
   const inputs = document.getElementsByTagName('fieldset');
-  const textarea = document.getElementsByTagName('textare');
+  const textarea = document.getElementsByTagName('textarea');
   let result = false;
   for (let i = 0; i < inputs.length; i += 1) {
     if (inputs[i].classList.contains('invalid')) {
@@ -71,6 +85,7 @@ function validateInputs() {
     customerEmailError.innerHTML = '';
     setValid(customerEmail);
   }
+
   if (customerMessage.value.trim() === '') {
     customerMessageError.innerHTML = 'Please fill in the message';
     setInvalid(customerMessage);

@@ -3,7 +3,7 @@ function valdiateForm(event) {
     const isValid = validateInputs()
     if(isValid){
         // save in local Storage
-        //document.getElementById("contact-form").submit(); 
+        document.getElementById("contact-form").submit(); 
     }
 }
 

@@ -101,7 +101,7 @@ function validateInputs() {
     customerMessage.classList.remove('invalid');
   }
   if (submitErrorStr !== '') {
-    submitErrorStr = 'Your form was not submitted! <br>' + submitErrorStr;
+    submitErrorStr = 'Your form was not submitted!';
   }
   submitErrorElement.innerHTML = submitErrorStr;
 }

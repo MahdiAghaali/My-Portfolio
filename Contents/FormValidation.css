@@ -1,0 +1,13 @@
+span.errorText {
+  color: red;
+}
+
+fieldset.invalid,
+textarea.invalid {
+  border: 1px solid red;
+}
+
+fieldset.valid,
+textarea.valid {
+  border: 1px solid green;
+}

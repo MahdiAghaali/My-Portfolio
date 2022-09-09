@@ -59,13 +59,14 @@ function validateInputs() {
   const customerName = document.getElementById('customer-name');
   const customerEmail = document.getElementById('customer-email');
   const customerMessage = document.getElementById('customer-message');
-
+  const submitErrorElement = document.getElementById('submitError');
   const customerNameError = customerName.parentElement.children[0];
   const customerEmailError = customerEmail.parentElement.children[0];
   const customerMessageError = customerMessage.previousElementSibling;
-
+  let submitErrorStr = '';
   if (customerName.value.trim() === '') {
     customerNameError.innerHTML = 'Please provide your name';
+    submitErrorStr += 'Please provide your name.<br>';
     setInvalid(customerName);
   } else {
     customerNameError.innerHTML = '';
@@ -74,12 +75,15 @@ function validateInputs() {
 
   if (customerEmail.value.trim() === '') {
     customerEmailError.innerHTML = 'Please provide your E-mail';
+    submitErrorStr += 'Please provide your E-mail.<br>';
     setInvalid(customerEmail);
   } else if (isLowerCase(customerEmail)) {
     customerEmailError.innerHTML = 'E-mail has to be lowercase';
+    submitErrorStr += 'E-mail has to be lowercase.<br>';
     setInvalid(customerEmail);
   } else if (isValidEmail(customerEmail.value) === false) {
     customerEmailError.innerHTML = 'Plase enter a valid Email';
+    submitErrorStr += 'Plase enter a valid Email<br>';
     setInvalid(customerEmail);
   } else {
     customerEmailError.innerHTML = '';
@@ -88,6 +92,7 @@ function validateInputs() {
 
   if (customerMessage.value.trim() === '') {
     customerMessageError.innerHTML = 'Please fill in the message';
+    submitErrorStr += 'Please fill in the message.<br>';
     customerMessage.classList.remove('valid');
     customerMessage.classList.add('invalid');
   } else {
@@ -95,6 +100,10 @@ function validateInputs() {
     customerMessage.classList.add('valid');
     customerMessage.classList.remove('invalid');
   }
+  if (submitErrorStr !== '') {
+    submitErrorStr = 'Your form was not submitted! <br>' + submitErrorStr;
+  }
+  submitErrorElement.innerHTML = submitErrorStr;
 }
 
 function valdiateForm(event) {

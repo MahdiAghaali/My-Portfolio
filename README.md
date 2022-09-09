@@ -2,7 +2,7 @@
 
 # Hello Microverse
 
-> This is My portfolio project, I'm starting off with HTML and CSS and I plan to add more features to this repository in the future and eventually use it as my main portfolio!
+> This is My portfolio project, I'm starting off with HTML, CSS and JavaScript and I plan to add more features to this repository in the future and eventually use it as my main portfolio!
 
 ## Live Demo 
 
@@ -10,7 +10,10 @@
 
 ## Built With
 
-- Html and Css
+- Html
+- Css
+- Javascript
+- Boostrap
 
 ## Author
 
@@ -29,6 +32,7 @@ Feel free to check the [issues page](../../issues/).
 ## 🤝 Contributors and collaborators
 - Javier Vargas: [@Javivy](https://github.com/Javivy)
 - Juan Vélez: [@juandapps](https://github.com/juandapps)
+- Cesar Valencia: [@cvalencia1991](https://github.com/cvalencia1991)
 
 ## Show your support
 

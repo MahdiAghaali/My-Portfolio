@@ -21,6 +21,7 @@ const isValidEmail = (email) => {
   return eamilPattern.test(email);
 };
 
+const customerEmail = document.getElementById('customer-email');
 function checkEmail() {
   const customerEmailError = customerEmail.parentElement.children[0];
   const str = customerEmail.value;
@@ -32,7 +33,6 @@ function checkEmail() {
     setValid(customerEmail);
   }
 }
-const customerEmail = document.getElementById('customer-email');
 customerEmail.addEventListener('input', checkEmail);
 
 function hasInvalidElement() {
@@ -88,10 +88,12 @@ function validateInputs() {
 
   if (customerMessage.value.trim() === '') {
     customerMessageError.innerHTML = 'Please fill in the message';
-    setInvalid(customerMessage);
+    customerMessage.classList.remove('valid');
+    customerMessage.classList.add('invalid');
   } else {
     customerMessageError.innerHTML = '';
-    setValid(customerMessage);
+    customerMessage.classList.add('valid');
+    customerMessage.classList.remove('invalid');
   }
 }
 

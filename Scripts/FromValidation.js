@@ -110,6 +110,7 @@ function valdiateForm(event) {
   event.preventDefault();
   validateInputs();
   if (hasInvalidElement() === false) {
+    saveinfomation();
     document.getElementById('contact-form').submit();
   }
 }

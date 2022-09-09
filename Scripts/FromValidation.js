@@ -2,7 +2,6 @@ function valdiateForm(event) {
     event.preventDefault();
     const isValid = validateInputs()
     if(isValid){
-        // save in local Storage
         document.getElementById("contact-form").submit(); 
     }
 }
